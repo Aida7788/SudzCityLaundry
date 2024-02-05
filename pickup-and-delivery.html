@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="pickup-and-delivery.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <title>SudzCityLaundry</title>
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.display =
+          navLinks.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("navbar-placeholder");
+          placeholder.innerHTML = text;
+          updateNavLinks();
+        })
+        .catch((error) => console.error("Error loading the navbar:", error));
+
+      function updateNavLinks() {
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = document.querySelectorAll(
+          "#navbar-placeholder .nav-item"
+        );
+
+        navLinks.forEach((link) => {
+          const linkHref = link.getAttribute("href").replace(/^\//, "");
+
+          const normalizedCurrentPage =
+            currentPage === "index.html" ? "" : currentPage;
+
+          if (linkHref === normalizedCurrentPage) {
+            link.classList.add("nav-active");
+          } else {
+            link.classList.remove("nav-active");
+          }
+        });
+      }
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("footer-placeholder");
+          placeholder.innerHTML = text;
+        })
+        .catch((error) => console.error("Error loading the footer:", error));
+    </script>
+
+    <div class="pickup-and-delivery-container">
+      <h1 class="pickup-and-delivery-header">
+        Download CleanCloud from the app store.
+      </h1>
+      <div class="pickup-and-delivery-underline"></div>
+      <p class="registration-paragraph">
+        Registration is easy! You’ll see that our QR code, or one of the mobile
+        links below, takes you to “CleanCloud™ ”,<span>
+          which is our Pickup & Delivery software.</span
+        >
+      </p>
+      <button class="book-now">
+        <a href="https://cleancloudapp.com/s3/28561">Book Now</a>
+      </button>
+      <p class="scan_QR_paragraph">
+        Scan the QR Code or look for us on the App store & Play Store
+      </p>
+      <img src="images/register_QR_code.webp" alt="QR" class="qr_code" />
+      <div class="google-play-app-store-container">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.cleancloudapp.cleancloud&pli=1"
+        >
+          <img
+            src="images/google_play.webp"
+            alt="Google Play"
+            class="google-play"
+          />
+        </a>
+        <a
+          href="https://apps.apple.com/us/app/cleancloud/id1031182499?uo=4&mt=8"
+        >
+          <img
+            src="images/iOS_APP_store.webp"
+            alt="App Store"
+            class="app-store"
+          />
+        </a>
+      </div>
+      <div class="pickup-and-delivery-images-container">
+        <img
+          src="images/clean_cloud.webp"
+          alt="Clean Cloud"
+          class="clean-cloud"
+        />
+        <img
+          src="images/register_page.webp"
+          alt="Register Page"
+          class="register-page"
+        />
+      </div>
+      <p class="choose-sudz-city">
+        Choose Sudz City in Largo, FL as your laundry…that’s it!
+      </p>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

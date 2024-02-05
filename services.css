@@ -1,0 +1,344 @@
+#services-bg-container {
+  position: relative;
+  background-image: url("/images/services_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  justify-content: center;
+  height: calc(100vh - 170px);
+  margin-top: 170px;
+}
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(2, 48, 64, 0.7);
+  z-index: 1;
+}
+
+.services-top-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.services-top-text h1 {
+  color: white;
+  font-size: 55px;
+  margin-top: 25px;
+}
+
+.services-underline {
+  width: 80px;
+  height: 6px;
+  background-color: white;
+  margin: auto;
+  margin-top: 32px;
+}
+
+.services-top-text p {
+  color: white;
+  font-size: 25px;
+  margin-top: 35px;
+}
+
+.services-icons-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.service-icon {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  width: 280px;
+  height: 340px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon:hover {
+  transform: translateY(-20px);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#pickup-delivery-service img,
+#commercial-laundry-service img,
+#self-service img,
+#wash-and-dry-service img,
+#stain-removal-and-fabric-care img {
+  width: 55px;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+
+#wash-fold img {
+  width: 40px;
+  margin-bottom: 20px;
+}
+
+.service-icon img:first-child {
+  margin-right: 10px;
+}
+
+.service-icon h2 {
+  font-size: 20px;
+  color: #004a80;
+  margin-bottom: 10px;
+}
+
+.service-icon p {
+  font-size: 16px;
+  color: #333;
+  text-align: justify;
+}
+
+#services-content {
+  background-color: #e6f0ff;
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.features-section {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.features-section h2 {
+  color: #1a2d5a;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.features-list li {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #1a2d5a;
+  font-size: 14px;
+  width: auto;
+}
+
+.services-content-first-block,
+.services-content-second-block {
+  margin: auto;
+  width: 50%;
+  padding-top: 60px;
+  text-align: justify;
+}
+
+.services-content-second-block {
+  padding-top: 30px;
+}
+
+.services-footer-underline {
+  width: 400px;
+  height: 1px;
+  background-color: #004a80;
+  margin: auto;
+  margin-top: 30px;
+}
+
+/* 769 - 1200 */
+@media screen and (max-width: 1200px) {
+  .services-icons-container {
+    width: 100%;
+  }
+}
+
+/* 601 - 768 */
+@media screen and (max-width: 768px) {
+  #services-bg-container {
+    height: calc(100vh - 150px);
+    margin-top: 150px;
+  }
+
+  .services-top-text h1 {
+    font-size: 40px;
+  }
+
+  .services-top-text p {
+    font-size: 23px;
+  }
+
+  .service-icon {
+    width: 270px;
+    height: 350px;
+  }
+
+  #services-content {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .services-content-first-block,
+  .services-content-second-block {
+    padding-top: 50px;
+  }
+
+  .services-footer-underline {
+    width: 300px;
+  }
+}
+
+/* 482 - 600 */
+@media screen and (max-width: 600px) {
+  .services-top-text h1 {
+    font-size: 32px;
+  }
+
+  .services-underline {
+    height: 4px;
+    margin-top: 25px;
+  }
+
+  .services-top-text p {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .service-icon {
+    width: 330px;
+    height: auto;
+    padding: 30px;
+  }
+
+  .service-icon h2 {
+    font-size: 18px;
+  }
+
+  .service-icon p {
+    font-size: 15px;
+  }
+
+  #services-content {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .features-list li {
+    font-size: 13px;
+  }
+
+  .services-content-first-block,
+  .services-content-second-block {
+    width: 60%;
+    padding-top: 40px;
+    font-size: 14px;
+  }
+
+  .services-content-second-block {
+    padding-top: 25px;
+  }
+
+  .services-footer-underline {
+    width: 280px;
+  }
+}
+
+/* 321 - 481 */
+@media screen and (max-width: 481px) {
+  #services-bg-container {
+    height: calc(100vh - 120px);
+    margin-top: 120px;
+  }
+
+  .services-top-text h1 {
+    font-size: 25px;
+  }
+
+  .services-underline {
+    margin-top: 20px;
+  }
+
+  .services-top-text p {
+    font-size: 17px;
+    margin-top: 25px;
+  }
+
+  .service-icon {
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+  }
+
+  #pickup-delivery-service img,
+  #commercial-laundry-service img,
+  #self-service img,
+  #wash-and-dry-service img,
+  #stain-removal-and-fabric-care img {
+    width: 40px;
+    margin-bottom: 5px;
+  }
+
+  #wash-fold img {
+    width: 30px;
+    margin-bottom: 10px;
+  }
+
+  .service-icon h2 {
+    font-size: 16px;
+  }
+
+  .service-icon p {
+    font-size: 14px;
+  }
+
+  #services-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .features-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .features-list li {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+
+  .services-content-first-block,
+  .services-content-second-block {
+    padding-top: 30px;
+    font-size: 13px;
+  }
+
+  .services-content-second-block {
+    padding-top: 20px;
+  }
+
+  .services-footer-underline {
+    width: 220px;
+  }
+}

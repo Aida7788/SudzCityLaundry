@@ -1,0 +1,349 @@
+#college-plans-container {
+  width: 100%;
+  margin: 220px 0 20px 0;
+}
+
+.college-plans-header {
+  color: #1a2d5a;
+  text-align: center;
+  font-size: 40px;
+}
+
+.college-plans-underline {
+  width: 80px;
+  height: 6px;
+  background-color: #1a2d5a;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.college-plans-circle-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 120px;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.college-plans-pricing-circle {
+  background: #e6f0ff;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.college-plans-pricing-circle:hover {
+  transform: translateY(-10px);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.free {
+  color: #004a80;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.free-description {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.college-plans-circle-description {
+  font-size: 19px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.phrase {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 60px;
+  width: 60%;
+  margin: auto;
+}
+
+.phrase-part-two {
+  color: #004a80;
+  font-size: 20px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.show-id-paragraph {
+  color: #595959;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.average-order-size-paragraph {
+  color: #1a2d5a;
+  margin: 40px 0 5px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.average-order-size-container {
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+}
+
+.average-order-size-container-first-block,
+.average-order-size-container-second-block {
+  display: flex;
+  gap: 150px;
+}
+
+.list-container {
+  flex-basis: calc(50% - 20px);
+  margin: 10px;
+}
+
+.average-order-size-header {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.average-order-size-header ul {
+  list-style: none;
+  padding: 0;
+}
+
+.average-order-size-header ul li {
+  margin-bottom: 10px;
+}
+
+.average-order-size-header ul li::before {
+  content: "• ";
+  color: #333;
+}
+
+/* 851 - 992 */
+@media screen and (max-width: 992px) {
+  .college-plans-header {
+    font-size: 35px;
+  }
+
+  .average-order-size-paragraph {
+    margin: 30px 0 -5px 0;
+  }
+
+  .average-order-size-header {
+    font-size: 16px;
+  }
+}
+
+/* 769 - 850 */
+@media screen and (max-width: 850px) {
+  .college-plans-header {
+    font-size: 32px;
+  }
+
+  .college-plans-circle-container {
+    gap: 80px;
+  }
+
+  .average-order-size-paragraph {
+    margin: 30px 0 -5px 0;
+  }
+
+  .average-order-size-container-first-block,
+  .average-order-size-container-second-block {
+    gap: 70px;
+  }
+
+  .average-order-size-header {
+    font-size: 16px;
+  }
+}
+
+/* 601 - 768 */
+@media screen and (max-width: 768px) {
+  #college-plans-container {
+    margin: 190px 0 20px 0;
+  }
+
+  .college-plans-header {
+    font-size: 27px;
+  }
+
+  .college-plans-underline {
+    height: 5px;
+  }
+
+  .college-plans-circle-container {
+    gap: 70px;
+  }
+
+  .free {
+    font-size: 33px;
+  }
+
+  .phrase {
+    padding-top: 50px;
+    width: 80%;
+  }
+
+  .average-order-size-paragraph {
+    margin: 30px 0 -5px 0;
+  }
+
+  .average-order-size-container-first-block,
+  .average-order-size-container-second-block {
+    gap: 50px;
+  }
+}
+
+/* 482 - 600 */
+@media screen and (max-width: 600px) {
+  #college-plans-container {
+    margin: 200px 0 15px 0;
+  }
+
+  .college-plans-header {
+    font-size: 22px;
+  }
+
+  .college-plans-underline {
+    height: 3px;
+    margin-top: 20px;
+  }
+
+  .college-plans-circle-container {
+    gap: 35px;
+    margin-top: 40px;
+  }
+
+  .college-plans-pricing-circle {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+  }
+
+  .free {
+    font-size: 26px;
+  }
+
+  .college-plans-circle-description {
+    font-size: 18px;
+  }
+
+  .phrase {
+    font-size: 14px;
+    padding-top: 40px;
+    width: 80%;
+    line-height: 18px;
+  }
+
+  .phrase-part-two {
+    font-size: 18px;
+  }
+
+  .show-id-paragraph {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .average-order-size-container {
+    padding: 15px;
+  }
+
+  .list-container ul li {
+    font-size: 13px;
+  }
+
+  .average-order-size-container-first-block,
+  .average-order-size-container-second-block {
+    gap: 20px;
+  }
+
+  .average-order-size-header {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
+
+/* 321 - 481 */
+@media screen and (max-width: 481px) {
+  #college-plans-container {
+    margin: 150px 0 15px 0;
+  }
+
+  .college-plans-header {
+    font-size: 18px;
+  }
+
+  .college-plans-circle-container {
+    gap: 20px;
+    margin-top: 25px;
+  }
+
+  .college-plans-pricing-circle {
+    width: 135px;
+    height: 135px;
+  }
+
+  .free {
+    font-size: 20px;
+  }
+
+  .free-description {
+    font-size: 14px;
+  }
+
+  .college-plans-circle-description {
+    font-size: 14px;
+  }
+
+  .phrase {
+    font-size: 13px;
+    padding-top: 30px;
+  }
+
+  .phrase-part-two {
+    font-size: 14px;
+  }
+
+  .show-id-paragraph {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+
+  .average-order-size-paragraph {
+    margin: 20px 0 -10px 0;
+    font-size: 14px;
+  }
+
+  .average-order-size-header {
+    font-size: 12px;
+  }
+
+  .average-order-size-container {
+    padding: 10px;
+  }
+
+  .list-container ul li {
+    font-size: 12px;
+  }
+
+  .average-order-size-container-first-block,
+  .average-order-size-container-second-block {
+    gap: 15px;
+  }
+}

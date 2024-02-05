@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
+    <title>SudzCityLaundry</title>
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.display =
+          navLinks.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("navbar-placeholder");
+          placeholder.innerHTML = text;
+          // After navbar is loaded, update nav links for the current page
+          updateNavLinks();
+        })
+        .catch((error) => console.error("Error loading the navbar:", error));
+
+      function updateNavLinks() {
+        // Get the current page from the URL or default to 'index.html'
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = document.querySelectorAll(
+          "#navbar-placeholder .nav-item"
+        );
+
+        navLinks.forEach((link) => {
+          // Get the href attribute of the link and remove the leading '/' if present
+          const linkHref = link.getAttribute("href").replace(/^\//, "");
+
+          // Normalize 'index.html' and '/' to be the same
+          const normalizedCurrentPage =
+            currentPage === "index.html" ? "" : currentPage;
+
+          if (linkHref === normalizedCurrentPage) {
+            link.classList.add("nav-active");
+          } else {
+            link.classList.remove("nav-active");
+          }
+        });
+      }
+
+      // Show the footer part
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("footer-placeholder");
+          placeholder.innerHTML = text;
+        })
+        .catch((error) => console.error("Error loading the footer:", error));
+    </script>
+
+    <div id="bg-image-container">
+      <div class="overlay"></div>
+
+      <div class="bg-image-content-container">
+        <div class="text-block left">
+          At Sudz City Laundromat, we take the chore out of laundry, making it
+          convenient, quick, and stress-free. Our state-of-the-art facility is
+          equipped with top-notch washing and drying machines, ensuring your
+          clothes receive the care they deserve. Whether you're a busy
+          professional, a parent on-the-go, or a student with a hectic schedule,
+          we're here to simplify your laundry routine.
+        </div>
+
+        <div class="text-block right">
+          At Sudz City Laundromat, we are committed to providing you with a
+          superior laundry experience. With a focus on efficiency, cleanliness,
+          and customer satisfaction, we strive to be your go-to destination for
+          all your laundry needs. Our dedicated team ensures a pristine
+          environment and is always ready to assist you with any questions or
+          concerns you may have.
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-text-block">
+      <h1 class="bottom-text-header">Why Choose Us:</h1>
+      <ul class="bottom-text-block-ul">
+        <li>
+          Quality Service: Our advanced machines and skilled staff guarantee
+          your clothes are treated with the utmost care.
+        </li>
+        <li>
+          Convenience: With ample parking and extended operating hours, we fit
+          into your busy schedule.
+        </li>
+        <li>
+          Affordability: We offer competitive pricing without compromising on
+          the quality of service.
+        </li>
+        <li>
+          Environmentally Friendly: We are environmentally conscious, using
+          energy-efficient machines and eco-friendly products.
+        </li>
+      </ul>
+    </div>
+
+    <div id="team-members-container">
+      <h1 class="team-members-header">Meet the Team:</h1>
+      <div class="members">
+        <div class="team-member owner">
+          <div class="member-details">
+            <h3 class="member-name">Chad Willis</h3>
+            <p class="member-role">Owner</p>
+            <p class="member-description">
+              With a passion for providing exceptional service, Chad reopened
+              Sudz City Laundromat with the vision of creating a hassle-free
+              laundry experience for the community. His dedication to customer
+              satisfaction and commitment to quality is what sets Sudz City
+              apart from the rest.
+            </p>
+          </div>
+        </div>
+        <div class="team-member manager">
+          <div class="member-details">
+            <h3 class="member-name">Tammy</h3>
+            <p class="member-role">Manager</p>
+            <p class="member-description">
+              Tammy brings years of experience in the laundry industry, ensuring
+              the operations run smoothly and customers receive the best service
+              possible. Her friendly demeanor and expertise make her a valuable
+              asset to our team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="join-team-container">
+      <p class="join-team-first-paragraph">
+        Join us at Sudz City Laundromat, where your laundry is our business.
+        Experience the convenience, quality, and care you deserve. Visit us
+        today and let us take the load off your shoulders!
+      </p>
+      <p class="join-team-second-paragraph">
+        Experience the convenience, quality, and care you deserve. Visit us
+        today and let us take the load off your shoulders!
+      </p>
+    </div>
+
+    <div class="sk-ww-google-reviews" data-embed-id="25358302"></div>
+    <script
+      src="https://widgets.sociablekit.com/google-reviews/widget.js"
+      async
+      defer
+    ></script>
+
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

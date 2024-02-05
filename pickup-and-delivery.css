@@ -1,0 +1,331 @@
+.pickup-and-delivery-container {
+  width: 100%;
+  margin: 220px 0 80px 0;
+}
+
+.pickup-and-delivery-header {
+  text-align: center;
+  font-size: 40px;
+  color: #1a2d5a;
+}
+
+.pickup-and-delivery-underline {
+  width: 80px;
+  height: 6px;
+  background-color: #1a2d5a;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.registration-paragraph {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 20px;
+  width: 60%;
+  margin: auto;
+}
+
+.book-now {
+  width: 230px;
+  height: 70px;
+  background-color: #e6f0ff;
+  border: none;
+  border-radius: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.book-now a {
+  color: #1a2d5a;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.scan_QR_paragraph {
+  margin-top: 60px;
+  font-size: 22px;
+  text-align: center;
+  color: #1a2d5a;
+}
+
+.qr_code {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.google-play-app-store-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+.google-play,
+.app-store {
+  width: 200px;
+  height: auto;
+}
+
+.pickup-and-delivery-images-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  gap: 80px;
+}
+
+.clean-cloud {
+  width: 348px;
+  height: 380px;
+}
+
+.register-page {
+  width: 407px;
+  height: 430px;
+}
+
+.choose-sudz-city {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 30px;
+}
+
+/* 851 - 992 */
+@media screen and (max-width: 992px) {
+  .pickup-and-delivery-container {
+    margin: 220px 0 50px 0;
+  }
+
+  .clean-cloud {
+    width: 300px;
+    height: 320px;
+  }
+
+  .register-page {
+    width: 340px;
+    height: 360px;
+  }
+
+  .choose-sudz-city {
+    font-size: 26px;
+  }
+}
+
+/* 769 - 850 */
+@media screen and (max-width: 850px) {
+  .pickup-and-delivery-container {
+    margin: 220px 0 40px 0;
+  }
+
+  .pickup-and-delivery-header {
+    font-size: 32px;
+  }
+  .registration-paragraph {
+    font-size: 18px;
+  }
+
+  .book-now {
+    width: 200px;
+    height: 60px;
+  }
+
+  .book-now a {
+    font-size: 22px;
+  }
+
+  .scan_QR_paragraph {
+    margin-top: 40px;
+  }
+
+  .qr_code {
+    width: 220px;
+    height: auto;
+  }
+
+  .pickup-and-delivery-images-container {
+    gap: 60px;
+  }
+
+  .clean-cloud {
+    width: 270px;
+    height: 300px;
+  }
+
+  .register-page {
+    width: 320px;
+    height: 340px;
+  }
+
+  .choose-sudz-city {
+    font-size: 24px;
+  }
+}
+
+/* 601 - 768 */
+@media screen and (max-width: 768px) {
+  .pickup-and-delivery-container {
+    margin: 200px 0 30px 0;
+  }
+
+  .pickup-and-delivery-header {
+    font-size: 27px;
+  }
+
+  .registration-paragraph {
+    font-size: 17px;
+    width: 80%;
+  }
+
+  .scan_QR_paragraph {
+    font-size: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .google-play,
+  .app-store {
+    width: 160px;
+  }
+
+  .pickup-and-delivery-images-container {
+    margin-top: 50px;
+    gap: 40px;
+  }
+
+  .clean-cloud {
+    width: 220px;
+    height: 250px;
+  }
+
+  .register-page {
+    width: 260px;
+    height: 280px;
+  }
+
+  .choose-sudz-city {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+}
+
+/* 482 - 600 */
+@media screen and (max-width: 600px) {
+  .pickup-and-delivery-container {
+    margin: 200px 0 20px 0;
+  }
+
+  .pickup-and-delivery-header {
+    font-size: 22px;
+  }
+
+  .pickup-and-delivery-underline {
+    height: 3px;
+    margin-top: 25px;
+  }
+
+  .registration-paragraph {
+    padding-top: 20px;
+    font-size: 15px;
+  }
+
+  .book-now {
+    width: 180px;
+    height: 50px;
+  }
+
+  .book-now a {
+    font-size: 20px;
+  }
+
+  .scan_QR_paragraph {
+    font-size: 18px;
+  }
+
+  .pickup-and-delivery-images-container {
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .clean-cloud {
+    width: 180px;
+    height: 210px;
+  }
+
+  .register-page {
+    width: 220px;
+    height: 240px;
+  }
+
+  .choose-sudz-city {
+    font-size: 18px;
+  }
+}
+
+/* 321 - 481 */
+@media screen and (max-width: 481px) {
+  .pickup-and-delivery-container {
+    margin: 150px 0 15px 0;
+  }
+
+  .pickup-and-delivery-header {
+    font-size: 18px;
+  }
+
+  .pickup-and-delivery-underline {
+    margin-top: 20px;
+  }
+
+  .registration-paragraph {
+    font-size: 14px;
+  }
+
+  .scan_QR_paragraph {
+    font-size: 16px;
+    margin-top: 25px;
+  }
+
+  .qr_code {
+    padding-top: 20px;
+    width: 160px;
+  }
+
+  .google-play-app-store-container {
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .google-play,
+  .app-store {
+    width: 125px;
+  }
+
+  .pickup-and-delivery-images-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  .clean-cloud {
+    width: 180px;
+    height: 200px;
+  }
+
+  .register-page {
+    width: 200px;
+    height: 220px;
+  }
+
+  .choose-sudz-city {
+    padding-top: 25px;
+    font-size: 15px;
+    width: 80%;
+    margin: auto;
+  }
+}

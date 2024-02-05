@@ -1,0 +1,358 @@
+#prices-container {
+  width: 100%;
+  margin-top: 220px;
+  background-color: white;
+  margin-bottom: 100px;
+}
+
+.pricies-header {
+  color: #1a2d5a;
+  text-align: center;
+  font-size: 50px;
+}
+
+.prices-underline {
+  width: 80px;
+  height: 6px;
+  background-color: #1a2d5a;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.prices-paragraph {
+  color: #595959;
+  font-size: 22px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.self-service-price {
+  color: #1a2d5a;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.price-list-container {
+  background-color: #fff;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 74%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.price-list-header {
+  font-size: 24px;
+  color: #1a2d5a;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #595959;
+  margin-bottom: 20px;
+}
+
+.price-list-second-header {
+  margin-top: 50px;
+}
+
+.price-list {
+  list-style: none;
+  padding: 0;
+}
+
+.price-list-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #ccc;
+  padding: 8px 0;
+  color: #595959;
+}
+
+.price-list-item:last-child {
+  border-bottom: none;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.description {
+  font-weight: normal;
+  color: #666;
+}
+
+.laundry-services-price {
+  color: #1a2d5a;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.pricing-circle-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  margin-top: 60px;
+  justify-content: center;
+}
+
+.pricing-circle {
+  background: #e6f0ff;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.pricing-circle:hover {
+  transform: translateY(-10px);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.service-title {
+  color: #1a2d5a;
+  font-weight: bold;
+}
+
+.pricing-amount {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.pricing-description {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.pricing-note {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  text-align: center;
+}
+
+.pricing-note:before {
+  content: "**";
+}
+
+/* 851 - 992 */
+@media screen and (max-width: 992px) {
+  .pricies-header {
+    font-size: 35px;
+  }
+  .prices-paragraph {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .self-service-price {
+    padding-top: 40px;
+  }
+}
+
+/* 769 - 850 */
+@media screen and (max-width: 850px) {
+  #prices-container {
+    margin-bottom: 70px;
+  }
+
+  .pricies-header {
+    font-size: 32px;
+  }
+
+  .price-list-second-header {
+    margin-top: 40px;
+  }
+  .laundry-services-price {
+    font-size: 20px;
+    padding-top: 5px;
+  }
+
+  .pricing-circle-container {
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .pricing-circle {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* 601 - 768 */
+@media screen and (max-width: 768px) {
+  #prices-container {
+    margin-top: 190px;
+    margin-bottom: 70px;
+  }
+
+  .pricies-header {
+    font-size: 27px;
+  }
+
+  .prices-underline {
+    height: 5px;
+  }
+
+  .prices-paragraph {
+    font-size: 18px;
+  }
+
+  .self-service-price {
+    font-size: 20px;
+    padding-top: 30px;
+  }
+
+  .price-list-container {
+    margin: 20px auto;
+    max-width: 75%;
+  }
+
+  .price-list-header {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .price-list-second-header {
+    margin-top: 30px;
+  }
+
+  .price-list-item {
+    font-size: 14px;
+  }
+
+  .laundry-services-price {
+    font-size: 18px;
+  }
+
+  .pricing-circle-container {
+    gap: 35px;
+    margin-top: 40px;
+  }
+
+  .pricing-circle {
+    width: 160px;
+    height: 160px;
+  }
+  .pricing-amount {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+}
+
+/* 482 - 600 */
+@media screen and (max-width: 600px) {
+  #prices-container {
+    margin-top: 200px;
+    margin-bottom: 50px;
+  }
+
+  .pricies-header {
+    font-size: 22px;
+  }
+
+  .laundry-services-price {
+    font-size: 17px;
+  }
+
+  .pricing-circle-container {
+    margin-top: 30px;
+  }
+
+  .pricing-amount {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+}
+
+/* 321 - 481 */
+@media screen and (max-width: 481px) {
+  #prices-container {
+    margin-top: 150px;
+  }
+
+  .pricies-header {
+    font-size: 18px;
+  }
+
+  .prices-underline {
+    height: 3px;
+    margin-top: 15px;
+  }
+
+  .prices-paragraph {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+
+  .self-service-price {
+    font-size: 18px;
+    padding-top: 20px;
+  }
+
+  .price-list-container {
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 80%;
+  }
+
+  .price-list-header {
+    font-size: 16px;
+  }
+
+  .price-list-second-header {
+    margin-top: 20px;
+  }
+
+  .price-list-item {
+    padding: 8px 0;
+    font-size: 13px;
+  }
+
+  .laundry-services-price {
+    font-size: 15px;
+  }
+
+  .pricing-circle-container {
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .pricing-circle {
+    width: 135px;
+    height: 135px;
+    padding: 20px;
+  }
+
+  .service-title {
+    font-size: 13px;
+  }
+
+  .pricing-amount {
+    font-size: 16px;
+  }
+
+  .pricing-description {
+    font-size: 13px;
+  }
+
+  .pricing-note {
+    font-size: 12px;
+  }
+}

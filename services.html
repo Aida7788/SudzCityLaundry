@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="services.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <title>SudzCityLaundry</title>
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.display =
+          navLinks.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("navbar-placeholder");
+          placeholder.innerHTML = text;
+          updateNavLinks();
+        })
+        .catch((error) => console.error("Error loading the navbar:", error));
+
+      function updateNavLinks() {
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = document.querySelectorAll(
+          "#navbar-placeholder .nav-item"
+        );
+
+        navLinks.forEach((link) => {
+          const linkHref = link.getAttribute("href").replace(/^\//, "");
+
+          const normalizedCurrentPage =
+            currentPage === "index.html" ? "" : currentPage;
+
+          if (linkHref === normalizedCurrentPage) {
+            link.classList.add("nav-active");
+          } else {
+            link.classList.remove("nav-active");
+          }
+        });
+      }
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("footer-placeholder");
+          placeholder.innerHTML = text;
+        })
+        .catch((error) => console.error("Error loading the footer:", error));
+    </script>
+
+    <div id="services-bg-container">
+      <div class="overlay"></div>
+      <div class="services-top-text">
+        <h1>Services</h1>
+        <div class="services-underline"></div>
+        <p>Come see us for all your laundry needs!</p>
+      </div>
+    </div>
+    <div class="services-icons-container">
+      <div class="service-icon" id="wash-fold">
+        <img src="/images/washing machine_icon.svg" alt="Wash, Dry, and Fold" />
+        <img
+          src="/images/towel_bath_bathroom_hanger_icon.svg"
+          alt="Wash, Dry, and Fold"
+        />
+        <h2>Wash, Dry, and Fold Service</h2>
+        <p>
+          Let our expert staff handle your laundry with care. Drop off your
+          dirty clothes, linens, and garments, and we'll wash, dry, fold, and
+          package them neatly for you. Our professionals use high-quality
+          detergents and machines to ensure your laundry comes out fresh and
+          clean every time.
+        </p>
+      </div>
+
+      <div class="service-icon" id="self-service">
+        <img src="/images/self_service_icon.svg" alt="Self-Service Laundry" />
+        <h2>Self-Service Laundry</h2>
+        <p>
+          For those who prefer a hands-on approach, our state-of-the-art
+          self-service area is equipped with modern washing machines and dryers.
+          Enjoy the ease of doing your laundry at your own pace while utilizing
+          our top-notch facilities. Our friendly staff is always available to
+          assist you if you need any help.
+        </p>
+      </div>
+
+      <div class="service-icon" id="pickup-delivery-service">
+        <img
+          src="images/pick_up_and_delivery_icon.svg"
+          alt="Pick Up and Delivery"
+        />
+        <h2>Pick-Up and Delivery Service:</h2>
+        <p>
+          Too busy to visit our laundromat? No worries! Sudz City Laundromat
+          offers convenient pick-up and delivery services. Schedule a pick-up,
+          and our team will collect your laundry from your doorstep. Once
+          cleaned, dried, and folded, we'll deliver your laundry back to you,
+          saving you time and effort.
+        </p>
+      </div>
+      <div class="service-icon" id="commercial-laundry-service">
+        <img
+          src="images/commercial_laundry_icon.svg"
+          alt="Commercial Laundry"
+        />
+        <h2>Commercial Laundry Services:</h2>
+        <p>
+          Businesses and organizations can benefit from our efficient commercial
+          laundry services. Whether you run a hotel, restaurant, or any other
+          business requiring large-scale laundry solutions, Sudz City Laundromat
+          can handle your commercial laundry needs with professionalism and
+          expertise.
+        </p>
+      </div>
+      <div class="service-icon" id="wash-and-dry-service">
+        <img src="images/wash_dry_icon.svg" alt="Wash and Dry" />
+        <h2>Wash and Dry Cleaning Services:</h2>
+        <p>
+          Delicate fabrics, intricate designs, and special garments require
+          extra care. Our wash and dry cleaning services ensure that your
+          valuable items are treated with the utmost attention. We use
+          specialized cleaning techniques to preserve the quality and longevity
+          of your clothing.
+        </p>
+      </div>
+
+      <div class="service-icon" id="stain-removal-and-fabric-care">
+        <img
+          src="images/stain_removal_and_fabric_care_icon.svg"
+          alt="Stain Removal and Fabric Care"
+        />
+        <h2>Stain Removal and Fabric Care:</h2>
+        <p>
+          Accidental spills and tough stains are no match for our stain removal
+          experts. We employ advanced techniques and eco-friendly products to
+          remove stubborn stains while preserving the integrity of your fabrics.
+          Trust us to handle your garments with care and precision.
+        </p>
+      </div>
+    </div>
+
+    <div id="services-content">
+      <div class="features-section">
+        <h2>Our Features</h2>
+        <ul class="features-list">
+          <li>Wash, Dry, & Fold</li>
+          <li>Dry Cleaning</li>
+          <li>Pressing</li>
+          <li>Shoe Repair</li>
+          <li>Free Wi-Fi</li>
+          <li>Self Service</li>
+          <li>High-Capacity Washers & Dryers</li>
+          <li>Large, Well-Lit Free Parking</li>
+          <li>Air Conditioned</li>
+          <li>Snacks & Sodas Available</li>
+          <li>Knowledgeable Attendants</li>
+          <li>Brand Name Laundry Supplies</li>
+          <li>Drop-off Laundry</li>
+          <li>Bright, Comfortable & Clean</li>
+          <li>Commercial Accounts</li>
+          <li>Pricing</li>
+          <li>Quality Services</li>
+          <li>And more!</li>
+        </ul>
+      </div>
+
+      <p class="services-content-first-block">
+        At Sudz City Laundromat, we understand the importance of clean, fresh
+        laundry in your daily life. That's why we offer a range of convenient
+        and reliable services to meet all your laundry needs. Whether you prefer
+        the flexibility of self-service or the convenience of our premium wash,
+        dry, and fold services, Sudz City Laundromat has you covered.
+      </p>
+      <div class="services-footer-underline"></div>
+      <p class="services-content-second-block">
+        At Sudz City Laundromat, we take pride in delivering exceptional laundry
+        services tailored to your specific requirements. Our commitment to
+        quality, convenience, and customer satisfaction sets us apart.
+        Experience the difference with Sudz City Laundromat – where your laundry
+        is our priority.
+      </p>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

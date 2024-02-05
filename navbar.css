@@ -1,0 +1,484 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu";
+  hyphens: auto;
+}
+
+h1,
+h2,
+h3,
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Top Info Bar Styles */
+#top-info-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 15;
+  background-color: #1a2d5a;
+  color: #ffffff;
+  padding: 5px 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  display: grid;
+}
+
+.phone-container,
+.location-container,
+.time-container {
+  display: flex;
+  align-items: center;
+}
+
+.location-container {
+  padding-top: 5px;
+}
+
+.phone,
+.time,
+.location {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.call-us-icon,
+.time-icon,
+.location-icon {
+  height: 22px;
+  padding-right: 8px;
+}
+
+/* Navbar styles */
+#navbar {
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  height: 100px;
+  background-color: #e6f0ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: grid;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #1a2d5a;
+  margin: 5px 0;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 70px;
+  width: 70px;
+  margin-right: 8px;
+  transform: rotate(340deg);
+  animation: pulseAnimation 2s ease-in-out infinite;
+}
+
+.brand-name {
+  color: #000c51;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  display: grid;
+}
+
+.brand-name span {
+  padding-left: 3px;
+}
+
+.nav-links {
+  display: flex;
+  padding-top: 8px;
+}
+
+.nav-item {
+  color: #333;
+  font-size: 18px;
+  padding: 16px;
+  transition: background-color 0.3s ease;
+  text-decoration: none !important;
+}
+
+.nav-item:hover,
+.nav-item.nav-active {
+  color: #004a80;
+  font-weight: bold;
+}
+
+/* 1201 - 1400 */
+@media screen and (max-width: 1400px) {
+  /* Navbar styles */
+  .nav-container {
+    padding: 0 45px;
+  }
+}
+
+/* 993 - 1200 */
+@media screen and (max-width: 1200px) {
+  /* Navbar styles */
+  .nav-container {
+    padding: 0 35px;
+  }
+
+  .logo {
+    height: 65px;
+    width: 65px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    padding-top: 6px;
+  }
+
+  .nav-item {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* 851 - 992 */
+@media screen and (max-width: 992px) {
+  /* Top Info Bar Styles */
+  #top-info-bar {
+    padding: 5px 35px;
+  }
+
+  .phone,
+  .time,
+  .location {
+    font-size: 14px;
+  }
+
+  .call-us-icon,
+  .time-icon,
+  .location-icon {
+    height: 20px;
+    padding-right: 6px;
+  }
+
+  /* Navbar styles */
+  .nav-container {
+    padding: 0 25px;
+  }
+
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .nav-links {
+    padding-top: 0px;
+    margin-right: -5px;
+  }
+
+  .nav-item {
+    font-size: 15px;
+    padding: 5px;
+  }
+}
+
+/* 769 - 850 */
+@media screen and (max-width: 850px) {
+  /* Top Info Bar Styles */
+  #top-info-bar {
+    padding: 5px 28px;
+  }
+
+  /* Navbar styles */
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .brand-name {
+    display: none;
+  }
+
+  .nav-links {
+    padding-top: 4px;
+  }
+
+  .nav-item {
+    padding: 7px;
+  }
+}
+
+/* 601 - 768 */
+@media screen and (max-width: 768px) {
+  /* Top Info Bar Styles */
+  #top-info-bar {
+    height: 70px;
+    padding: 0px 16px;
+  }
+
+  .phone,
+  .time,
+  .location {
+    font-size: 14px;
+  }
+
+  .call-us-icon,
+  .time-icon,
+  .location-icon {
+    height: 18px;
+    padding-right: 6px;
+  }
+
+  .time-icon {
+    margin-left: 25px;
+  }
+
+  /* Navbar styles */
+  #navbar {
+    height: 80px;
+  }
+
+  .nav-container {
+    padding: 0 40px;
+  }
+
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .brand-name {
+    color: #000c51;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: grid;
+  }
+
+  .brand-name span {
+    padding-left: 3px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e6f0ff;
+    flex-direction: column;
+    padding: 8px 0;
+  }
+
+  .nav-item {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+/* 482 - 600 */
+@media screen and (max-width: 600px) {
+  /* Top Info Bar Styles */
+  #top-info-bar {
+    display: grid;
+    height: 80px;
+    padding: 0px 20px;
+  }
+
+  .phone,
+  .time,
+  .location {
+    font-size: 14px;
+  }
+
+  .call-us-icon,
+  .time-icon,
+  .location-icon {
+    height: 16px;
+    margin-right: 3px;
+  }
+
+  .time-icon {
+    height: 15px;
+    margin-left: 0px;
+  }
+
+  .location-container {
+    margin-top: 3px;
+    margin-bottom: -6px;
+  }
+
+  .time-container {
+    padding-bottom: 0px;
+  }
+
+  /* Navbar styles */
+  #navbar {
+    top: 80px;
+  }
+
+  .nav-container {
+    padding: 0 40px;
+  }
+
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .brand-name span {
+    padding-left: 3px;
+  }
+
+  .nav-item {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .bar {
+    margin: 3px 0;
+  }
+}
+
+/* 321 - 481 */
+@media screen and (max-width: 481px) {
+  /* Top Info Bar Styles */
+  #top-info-bar {
+    height: 60px;
+    padding: 2px 3px 0 5px;
+  }
+
+  .phone,
+  .time,
+  .location {
+    font-size: 11px;
+  }
+
+  .call-us-icon,
+  .time-icon,
+  .location-icon {
+    height: 12px;
+    margin-right: 0px;
+  }
+
+  .time-icon {
+    height: 11px;
+    margin-left: 1px;
+  }
+
+  .location-container {
+    margin-top: 0px;
+    margin-bottom: -7px;
+  }
+
+  /* Navbar styles */
+  #navbar {
+    top: 60px;
+    height: 60px;
+  }
+
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .logo {
+    height: 45px;
+    width: 45px;
+  }
+
+  .brand-name {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-links {
+    top: 60px;
+    font-size: 12px;
+  }
+}
+
+/* 280 - 321 */
+@media screen and (max-width: 321px) {
+  /* Top Info Bar Styles */
+  #top-info-bar {
+    padding: 2px 0px 0 3px;
+  }
+
+  .phone,
+  .time,
+  .location {
+    font-size: 10px;
+  }
+
+  .call-us-icon,
+  .time-icon,
+  .location-icon {
+    height: 11px;
+  }
+
+  .time-icon {
+    height: 10px;
+    margin-left: 0.5px;
+  }
+
+  .location-container {
+    margin-bottom: -9px;
+  }
+
+  /* Navbar styles */
+  .bar {
+    width: 20px;
+    height: 2px;
+  }
+}

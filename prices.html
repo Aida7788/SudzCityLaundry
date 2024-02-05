@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="prices.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <title>SudzCityLaundry</title>
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.display =
+          navLinks.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("navbar-placeholder");
+          placeholder.innerHTML = text;
+          updateNavLinks();
+        })
+        .catch((error) => console.error("Error loading the navbar:", error));
+
+      function updateNavLinks() {
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = document.querySelectorAll(
+          "#navbar-placeholder .nav-item"
+        );
+
+        navLinks.forEach((link) => {
+          const linkHref = link.getAttribute("href").replace(/^\//, "");
+
+          const normalizedCurrentPage =
+            currentPage === "index.html" ? "" : currentPage;
+
+          if (linkHref === normalizedCurrentPage) {
+            link.classList.add("nav-active");
+          } else {
+            link.classList.remove("nav-active");
+          }
+        });
+      }
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("footer-placeholder");
+          placeholder.innerHTML = text;
+        })
+        .catch((error) => console.error("Error loading the footer:", error));
+    </script>
+
+    <div id="prices-container">
+      <h1 class="pricies-header">Pricing</h1>
+      <div class="prices-underline"></div>
+      <p class="prices-paragraph">
+        We offer competitive prices with our affordable wash and fold and pickup
+        and delivery services.
+      </p>
+      <p class="self-service-price">Self Service Coin Laundry Price:</p>
+
+      <div class="price-list-container">
+        <div class="price-list-header">Douglasville:</div>
+        <ul class="price-list">
+          <li class="price-list-item">
+            <span>20 lb Washer (6 Total)</span> <span class="price">$3.50</span>
+          </li>
+          <li class="price-list-item">
+            <span>30 lb Washer (6 Total)</span> <span class="price">$5.25</span>
+          </li>
+          <li class="price-list-item">
+            <span>40 lb Washer (6 Total)</span> <span class="price">$7.00</span>
+          </li>
+          <li class="price-list-item">
+            <span>60 lb Washer (6 Total)</span>
+            <span class="price">$10.50</span>
+          </li>
+          <li class="price-list-item">
+            <span>90 lb Washer (2 Total)</span>
+            <span class="price">$14.00</span>
+          </li>
+          <li class="price-list-item">
+            <span>50 lb Dryer (6 Total)</span>
+            <span class="price"
+              >$0.25 <span class="description">(7 Minutes)</span></span
+            >
+          </li>
+          <li class="price-list-item">
+            <span>80 lb Dryer (2 Total)</span>
+            <span class="price"
+              >$0.25 <span class="description">(for 6 min.)</span></span
+            >
+          </li>
+        </ul>
+
+        <div class="price-list-header price-list-second-header">Lithonia:</div>
+        <ul class="price-list">
+          <li class="price-list-item">
+            <span>20 lb Washer (8 Total)</span> <span class="price">$3.50</span>
+          </li>
+          <li class="price-list-item">
+            <span>30 lb Washer (8 Total)</span> <span class="price">$5.25</span>
+          </li>
+          <li class="price-list-item">
+            <span>40 lb Washer (8 Total)</span> <span class="price">$7.00</span>
+          </li>
+          <li class="price-list-item">
+            <span>60 lb Washer (8 Total)</span>
+            <span class="price">$10.50</span>
+          </li>
+          <li class="price-list-item">
+            <span>90 lb Washer (6 Total)</span>
+            <span class="price">$14.00</span>
+          </li>
+          <li class="price-list-item">
+            <span>30 lb Dryer (26 Total)</span>
+            <span class="price"
+              >$0.25 <span class="description">(8 Minutes)</span></span
+            >
+          </li>
+          <li class="price-list-item">
+            <span>50 lb Dryer (12 Total)</span>
+            <span class="price"
+              >$25 <span class="description">(for 7 min.)</span></span
+            >
+          </li>
+          <li class="price-list-item">
+            <span>80 lb Dryer (8 Total)</span>
+            <span class="price"
+              >$25 <span class="description">(for 6 min.)</span></span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <p class="laundry-services-price">
+        Laundry Services near Douglasville and Lithonia Prices:
+      </p>
+
+      <div class="pricing-circle-container">
+        <div class="pricing-circle">
+          <div class="service-title">Wash & Fold</div>
+          <div class="pricing-amount">$1.39</div>
+          <div class="pricing-description">Per Pound</div>
+          <div class="pricing-note">10 lb. Minimum</div>
+        </div>
+
+        <div class="pricing-circle">
+          <div class="service-title">Dry & Fold</div>
+          <div class="pricing-amount">$0.95</div>
+          <div class="pricing-description">Per Pound</div>
+        </div>
+
+        <div class="pricing-circle">
+          <div class="service-title">Pickup & Delivery Service</div>
+          <div class="pricing-amount">$1.69</div>
+          <div class="pricing-description">Per Pound</div>
+          <div class="pricing-note">30 Minimum Order</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

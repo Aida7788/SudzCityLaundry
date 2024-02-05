@@ -1,0 +1,155 @@
+#about-us-container {
+  width: 100%;
+  margin-top: 220px;
+  background-color: white;
+}
+
+.about-us-header {
+  color: #1a2d5a;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.about-us-underline {
+  width: 80px;
+  height: 6px;
+  background-color: #1a2d5a;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.about-us-icon {
+  width: 120px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.about-us-content {
+  width: 75%;
+  text-align: left;
+  margin: auto;
+  line-height: 35px;
+}
+
+.carousel {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#footer-placeholder {
+  background-color: #1a2d5a;
+  height: 280px;
+}
+
+/* 851 - 992 */
+@media screen and (max-width: 992px) {
+  .about-us-header {
+    font-size: 35px;
+  }
+}
+
+/* 769 - 850 */
+@media screen and (max-width: 850px) {
+  .about-us-header {
+    font-size: 32px;
+  }
+}
+
+/* 601 - 768 */
+@media screen and (max-width: 768px) {
+  #about-us-container {
+    margin-top: 190px;
+  }
+
+  .about-us-header {
+    font-size: 27px;
+  }
+
+  .about-us-icon {
+    width: 100px;
+  }
+
+  .about-us-content {
+    width: 75%;
+    text-align: left;
+    margin: auto;
+    line-height: 25px;
+  }
+}
+
+/* 482 - 600 */
+@media screen and (max-width: 600px) {
+  #about-us-container {
+    margin-top: 200px;
+  }
+
+  .about-us-header {
+    font-size: 22px;
+  }
+
+  .about-us-underline {
+    height: 3px;
+    margin-top: 20px;
+  }
+
+  .about-us-icon {
+    width: 80px;
+    margin-top: 0px;
+  }
+
+  .about-us-content {
+    width: 80%;
+    line-height: 22px;
+    font-size: 15px;
+  }
+
+  .carousel {
+    width: 60%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  #footer-placeholder {
+    height: 200px;
+  }
+}
+
+/* 321 - 481 */
+@media screen and (max-width: 481px) {
+  #about-us-container {
+    margin-top: 150px;
+  }
+
+  .about-us-header {
+    font-size: 18px;
+  }
+
+  .about-us-underline {
+    margin-top: 15px;
+  }
+
+  .about-us-icon {
+    width: 70px;
+  }
+
+  .about-us-content {
+    font-size: 14px;
+  }
+
+  .carousel {
+    width: 60%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  #footer-placeholder {
+    height: 230px;
+  }
+}

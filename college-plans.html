@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="college-plans.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <title>SudzCityLaundry</title>
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.display =
+          navLinks.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("navbar-placeholder");
+          placeholder.innerHTML = text;
+          updateNavLinks();
+        })
+        .catch((error) => console.error("Error loading the navbar:", error));
+
+      function updateNavLinks() {
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = document.querySelectorAll(
+          "#navbar-placeholder .nav-item"
+        );
+
+        navLinks.forEach((link) => {
+          const linkHref = link.getAttribute("href").replace(/^\//, "");
+
+          const normalizedCurrentPage =
+            currentPage === "index.html" ? "" : currentPage;
+
+          if (linkHref === normalizedCurrentPage) {
+            link.classList.add("nav-active");
+          } else {
+            link.classList.remove("nav-active");
+          }
+        });
+      }
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("footer-placeholder");
+          placeholder.innerHTML = text;
+        })
+        .catch((error) => console.error("Error loading the footer:", error));
+    </script>
+
+    <div id="college-plans-container">
+      <h1 class="college-plans-header">
+        Laundry Service Plans for College Students
+      </h1>
+      <div class="college-plans-underline"></div>
+
+      <div class="college-plans-circle-container">
+        <div class="college-plans-pricing-circle">
+          <p class="free">Free</p>
+          <p class="free-description">Pick-Up & Delivery</p>
+        </div>
+
+        <div class="college-plans-pricing-circle">
+          <p class="college-plans-circle-description">
+            48 hour turn around - $2.30/lb discounted rate!
+          </p>
+        </div>
+      </div>
+
+      <p class="phrase">
+        "I wish I'd spent more time doing laundry" said no college grad ever.
+        Drake & Grandview University students -
+      </p>
+      <p class="phrase-part-two">
+        Schedule your laundry pick-up and delivery today!
+      </p>
+      <p class="show-id-paragraph">
+        *Must show student ID and live on/by campus.
+      </p>
+
+      <p class="average-order-size-paragraph">
+        See what an average order size looks like
+      </p>
+
+      <div class="average-order-size-container">
+        <div class="average-order-size-container-first-block">
+          <div class="list-container">
+            <h2 class="average-order-size-header">
+              Approximately 15 lbs per week
+            </h2>
+            <ul>
+              <li>4 t-shirts</li>
+              <li>1 pair of jeans</li>
+              <li>3 button down shirts</li>
+              <li>1 pair of shorts</li>
+              <li>7 pairs of underwear</li>
+              <li>6 pairs of socks</li>
+              <li>1 towel</li>
+              <li>1 set of sheets</li>
+            </ul>
+          </div>
+
+          <div class="list-container">
+            <h2 class="average-order-size-header">
+              Approximately 20 lbs per week
+            </h2>
+            <ul>
+              <li>6 t-shirts</li>
+              <li>2 button down shirts</li>
+              <li>1 flannel shirt</li>
+              <li>2 pairs of jeans</li>
+              <li>2 pairs of shorts</li>
+              <li>9 pairs of underwear</li>
+              <li>8 pairs of socks</li>
+              <li>2 towels</li>
+              <li>1 set of sheets</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="average-order-size-container-first-block">
+          <div class="list-container">
+            <h2 class="average-order-size-header">
+              Approximately 25 lbs per week
+            </h2>
+            <ul>
+              <li>8 t-shirts</li>
+              <li>3 button down shirts</li>
+              <li>1 flannel</li>
+              <li>5 pairs of jeans</li>
+              <li>3 pairs of shorts</li>
+              <li>10 pairs of underwear</li>
+              <li>10 pairs of socks</li>
+              <li>4 towels</li>
+              <li>1 set of sheets</li>
+            </ul>
+          </div>
+
+          <div class="list-container">
+            <h2 class="average-order-size-header">
+              Approximately 30 lbs per week
+            </h2>
+            <ul>
+              <li>12 t-shirts</li>
+              <li>4 button down shirts</li>
+              <li>2 flannel shirts</li>
+              <li>5 pairs of shorts</li>
+              <li>12 pairs of underwear</li>
+              <li>12 pairs of socks</li>
+              <li>6 towels</li>
+              <li>2 sets of sheets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

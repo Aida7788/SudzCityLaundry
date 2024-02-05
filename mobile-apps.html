@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="mobile-apps.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <title>SudzCityLaundry</title>
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.display =
+          navLinks.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("navbar-placeholder");
+          placeholder.innerHTML = text;
+          updateNavLinks();
+        })
+        .catch((error) => console.error("Error loading the navbar:", error));
+
+      function updateNavLinks() {
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = document.querySelectorAll(
+          "#navbar-placeholder .nav-item"
+        );
+
+        navLinks.forEach((link) => {
+          const linkHref = link.getAttribute("href").replace(/^\//, "");
+
+          const normalizedCurrentPage =
+            currentPage === "index.html" ? "" : currentPage;
+
+          if (linkHref === normalizedCurrentPage) {
+            link.classList.add("nav-active");
+          } else {
+            link.classList.remove("nav-active");
+          }
+        });
+      }
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((text) => {
+          const placeholder = document.getElementById("footer-placeholder");
+          placeholder.innerHTML = text;
+        })
+        .catch((error) => console.error("Error loading the footer:", error));
+    </script>
+    <div id="mobile-apps-container">
+      <h1 class="mobile-apps-header">Mobile Apps</h1>
+      <div class="mobile-apps-underline"></div>
+      <p class="self-service-or-wash-and-fold">Self Service or Wash & Fold</p>
+      <p class="offer">
+        We offer 2 FREE mobile apps. Pick the one that is right for you!
+      </p>
+      <div class="mobile-apps-content-container">
+        <div class="mobile-apps-first-block">
+          <h1 class="mobile-apps-first-block-header">Self Service</h1>
+          <p class="clean-day">Have a Clean Day!™</p>
+          <img
+            src="images/speed_queen.webp"
+            alt="Speed Queen"
+            class="speed-queen"
+          />
+          <div class="mobile-apps-icons-first-block">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.alliancelaundry.app.speedqueen&hl=en_US&gl=US&pli=1"
+            >
+              <img
+                src="images/google_play.webp"
+                alt="Google Play"
+                class="mobile-apps-google-play"
+              />
+            </a>
+            <a href="https://apps.apple.com/us/app/speed-queen/id1235121730">
+              <img
+                src="images/iOS_APP_store.webp"
+                alt="App Store"
+                class="mobile-apps-app-store"
+              />
+            </a>
+          </div>
+          <ul class="mobile-apps-list-first-block">
+            <li>Put $10 on your account, we give you $10 in FREE washes</li>
+            <li>Control your machine(s) remotely</li>
+            <li>Time left on your cycle, in REAL time</li>
+            <li>
+              Earn FREE washes. Every $1 you spend = 1 point. $5.00 washer = 5
+              points…Reach 50 points and the app gives you $5 in FREE wash
+              credit, automatically!
+            </li>
+            <li>
+              When downloading app, enter <span>686970</span> as LaundrOclean™
+              location pin.
+            </li>
+          </ul>
+        </div>
+
+        <p class="mobile-apps-second-block">- OR -</p>
+
+        <div class="mobile-apps-third-block">
+          <h1 class="mobile-apps-third-block-header">Wash & Fold</h1>
+          <h1 class="mobile-apps-third-block-header">
+            FREE Pick Up & Delivery
+          </h1>
+          <p class="escape-laundry-day">Escape Laundry Day!™</p>
+          <img
+            src="images/clean_cloud_logo.webp"
+            alt="Clean Cloud"
+            class="clean-cloud-logo"
+          />
+          <div class="mobile-apps-icons-third-block">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.alliancelaundry.app.speedqueen&hl=en_US&gl=US&pli=1"
+            >
+              <img
+                src="images/google_play.webp"
+                alt="Google Play"
+                class="mobile-apps-google-play"
+              />
+            </a>
+            <a href="https://apps.apple.com/us/app/speed-queen/id1235121730">
+              <img
+                src="images/iOS_APP_store.webp"
+                alt="App Store"
+                class="mobile-apps-app-store"
+              />
+            </a>
+          </div>
+          <ul class="third-mobile-apps-list-first-block">
+            <li>Choose Date & Location</li>
+            <li><span>FREE Pickup & Delivery</span></li>
+            <li>Autopay per pre-established debit or credit</li>
+            <li>20% off your first order!</li>
+          </ul>
+          <h2 class="discount">20% OFF</h2>
+          <h3 class="mobile-apps-third-block-bottom-paragraph">
+            First Wash & Fold Order
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

@@ -1,0 +1,457 @@
+#mobile-apps-container {
+  width: 100%;
+  margin: 220px 0 40px 0;
+}
+
+.mobile-apps-header {
+  color: #1a2d5a;
+  text-align: center;
+  font-size: 40px;
+}
+
+.mobile-apps-underline {
+  width: 80px;
+  height: 6px;
+  background-color: #1a2d5a;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.self-service-or-wash-and-fold {
+  text-align: center;
+  color: #1a2d5a;
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+.offer {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 40px;
+}
+
+.mobile-apps-content-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 80px 25px 25px 25px;
+}
+
+.mobile-apps-first-block,
+.mobile-apps-third-block {
+  width: 40%;
+  height: auto;
+  background-color: transparent;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 55px 0 60px 0;
+}
+
+.mobile-apps-first-block-header,
+.mobile-apps-third-block-header {
+  font-size: 25px;
+  text-align: center;
+  color: #1a2d5a;
+}
+
+.clean-day,
+.escape-laundry-day {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 25px;
+}
+
+.speed-queen,
+.clean-cloud-logo {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.mobile-apps-icons-first-block,
+.mobile-apps-icons-third-block {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 50px;
+}
+
+.mobile-apps-google-play,
+.mobile-apps-app-store {
+  width: 200px;
+  height: auto;
+}
+
+.mobile-apps-list-first-block,
+.third-mobile-apps-list-first-block {
+  width: 80%;
+  margin: auto;
+  padding-top: 30px;
+  list-style: none;
+}
+
+.mobile-apps-list-first-block li,
+.third-mobile-apps-list-first-block li {
+  padding: 5px;
+  list-style-type: disc;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.mobile-apps-list-first-block li span,
+.third-mobile-apps-list-first-block li span {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.mobile-apps-second-block {
+  font-size: 30px;
+  color: #1a2d5a;
+  padding-top: 60px;
+  font-weight: bold;
+}
+
+.discount {
+  color: #1a2d5a;
+  font-size: 70px;
+  font-weight: 200;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.mobile-apps-third-block-bottom-paragraph {
+  text-align: center;
+  font-size: 35px;
+  color: #1a2d5a;
+  padding-top: 20px;
+  font-weight: 100;
+}
+
+/* 993 - 1200 */
+@media screen and (max-width: 1200px) {
+  .mobile-apps-content-container {
+    gap: 55px;
+    padding: 70px 25px 25px 25px;
+  }
+
+  .mobile-apps-icons-first-block,
+  .mobile-apps-icons-third-block {
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .mobile-apps-google-play,
+  .mobile-apps-app-store {
+    width: 150px;
+  }
+
+  .discount {
+    font-size: 60px;
+  }
+
+  .mobile-apps-third-block-bottom-paragraph {
+    font-size: 30px;
+  }
+}
+
+/* 851 - 992 */
+@media screen and (max-width: 992px) {
+  #mobile-apps-container {
+    margin: 220px 0 30px 0;
+  }
+
+  .mobile-apps-header {
+    font-size: 35px;
+  }
+  .self-service-or-wash-and-fold {
+    font-size: 30px;
+  }
+
+  .offer {
+    margin-top: 30px;
+  }
+
+  .mobile-apps-content-container {
+    gap: 40px;
+    padding: 55px 20px 20px 20px;
+  }
+
+  .mobile-apps-first-block,
+  .mobile-apps-third-block {
+    padding: 45px 0 50px 0;
+  }
+
+  .mobile-apps-first-block-header,
+  .mobile-apps-third-block-header {
+    font-size: 23px;
+  }
+
+  .clean-day,
+  .escape-laundry-day {
+    font-size: 23px;
+  }
+
+  .speed-queen,
+  .clean-cloud-logo {
+    width: 250px;
+  }
+
+  .mobile-apps-icons-first-block,
+  .mobile-apps-icons-third-block {
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .mobile-apps-google-play,
+  .mobile-apps-app-store {
+    width: 130px;
+  }
+
+  .mobile-apps-list-first-block li,
+  .third-mobile-apps-list-first-block li {
+    font-size: 17px;
+  }
+
+  .discount {
+    font-size: 50px;
+  }
+
+  .mobile-apps-third-block-bottom-paragraph {
+    font-size: 26px;
+  }
+}
+
+/* 769 - 850 */
+@media screen and (max-width: 850px) {
+  .mobile-apps-content-container {
+    gap: 35px;
+  }
+}
+
+/* 601 - 768 */
+@media screen and (max-width: 768px) {
+  #mobile-apps-container {
+    margin: 190px 0 30px 0;
+  }
+
+  .mobile-apps-header {
+    font-size: 27px;
+  }
+
+  .self-service-or-wash-and-fold {
+    font-size: 25px;
+  }
+
+  .offer {
+    font-size: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .mobile-apps-content-container {
+    gap: 28px;
+    padding: 45px 15px 15px 15px;
+  }
+
+  .mobile-apps-first-block,
+  .mobile-apps-third-block {
+    padding: 30px 0 40px 0;
+  }
+
+  .mobile-apps-first-block-header,
+  .mobile-apps-third-block-header {
+    font-size: 22px;
+  }
+
+  .clean-day,
+  .escape-laundry-day {
+    font-size: 21px;
+    padding-top: 15px;
+  }
+
+  .speed-queen,
+  .clean-cloud-logo {
+    width: 180px;
+  }
+
+  .mobile-apps-icons-first-block,
+  .mobile-apps-icons-third-block {
+    margin-top: 15px;
+    gap: 18px;
+  }
+
+  .mobile-apps-google-play,
+  .mobile-apps-app-store {
+    width: 90px;
+  }
+
+  .mobile-apps-list-first-block li,
+  .third-mobile-apps-list-first-block li {
+    font-size: 15px;
+  }
+
+  .mobile-apps-second-block {
+    font-size: 23px;
+  }
+
+  .discount {
+    font-size: 40px;
+    padding-top: 30px;
+  }
+
+  .mobile-apps-third-block-bottom-paragraph {
+    font-size: 22px;
+  }
+}
+
+/* 482 - 600 */
+@media screen and (max-width: 600px) {
+  #mobile-apps-container {
+    margin: 190px 0 30px 0;
+  }
+
+  .mobile-apps-header {
+    font-size: 22px;
+  }
+
+  .mobile-apps-underline {
+    height: 3px;
+    margin-top: 20px;
+  }
+
+  .self-service-or-wash-and-fold {
+    font-size: 23px;
+    margin-top: 17px;
+  }
+
+  .offer {
+    font-size: 18px;
+    margin-top: 22px;
+  }
+
+  .mobile-apps-content-container {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 35px 30px 15px 30px;
+  }
+
+  .mobile-apps-first-block,
+  .mobile-apps-third-block {
+    width: 100%;
+    padding: 20px 0 30px 0;
+  }
+
+  .mobile-apps-first-block-header,
+  .mobile-apps-third-block-header {
+    font-size: 20px;
+  }
+
+  .clean-day,
+  .escape-laundry-day {
+    font-size: 20px;
+    padding-top: 12px;
+  }
+
+  .speed-queen,
+  .clean-cloud-logo {
+    width: 190px;
+  }
+
+  .mobile-apps-icons-first-block,
+  .mobile-apps-icons-third-block {
+    margin-top: 15px;
+    gap: 20px;
+  }
+
+  .mobile-apps-google-play,
+  .mobile-apps-app-store {
+    width: 120px;
+  }
+
+  .mobile-apps-list-first-block,
+  .third-mobile-apps-list-first-block {
+    padding-top: 20px;
+  }
+
+  .mobile-apps-list-first-block li,
+  .third-mobile-apps-list-first-block li {
+    padding: 3px;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .mobile-apps-list-first-block li span,
+  .third-mobile-apps-list-first-block li span {
+    font-size: 16px;
+  }
+
+  .mobile-apps-second-block {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .discount {
+    font-size: 25px;
+    padding-top: 20px;
+  }
+
+  .mobile-apps-third-block-bottom-paragraph {
+    font-size: 20px;
+    padding-top: 15px;
+  }
+}
+
+/* 322 - 481 */
+@media screen and (max-width: 481px) {
+  #mobile-apps-container {
+    margin: 150px 0 15px 0;
+  }
+
+  .mobile-apps-header {
+    font-size: 18px;
+  }
+
+  .mobile-apps-underline {
+    margin-top: 15px;
+  }
+
+  .self-service-or-wash-and-fold {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .offer {
+    font-size: 16px;
+    margin-top: 18px;
+  }
+
+  .mobile-apps-content-container {
+    padding: 35px 20px 15px 20px;
+  }
+
+  .mobile-apps-first-block-header,
+  .mobile-apps-third-block-header {
+    font-size: 18px;
+  }
+
+  .clean-day,
+  .escape-laundry-day {
+    font-size: 18px;
+  }
+
+  .mobile-apps-icons-first-block,
+  .mobile-apps-icons-third-block {
+    margin-top: 15px;
+    gap: 10px;
+  }
+}
+
+/* 280 - 321 */
+@media screen and (max-width: 321px) {
+  .mobile-apps-google-play,
+  .mobile-apps-app-store {
+    width: 100px;
+  }
+}
